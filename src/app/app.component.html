@@ -1,0 +1,244 @@
+<!-- <div class="container" >
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Number</th>
+        <th scope="col">UserId</th>
+        <th scope="col">Date</th>
+
+      </tr>
+    </thead>
+    <tbody *ngFor="let data of pageaArray">
+      <tr>
+        <th scope="row" >{{data.sno}}</th>
+        <td>{{data.callfromnumber}}</td>
+        <td>{{data.userId}}</td>
+        <td>{{data.date}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button class="btn btn-primary" (click)="onClickPage()">Next</button>
+<input  type="text" [(ngModel)]="test">
+<app-child [test]="test"></app-child>
+
+<form [formGroup]="forms" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name"/>
+<button>submit</button>
+</form>
+
+<div #demo>{{ngDocheck}}</div>
+
+<input type="text" [(ngModel)]="data1">
+<input type="text" [(ngModel)]="subham">
+
+
+
+<app-login [data1]="data1" [subham] ='subham'></app-login>
+
+<div appCDir>{{data1 | cpipe : 10}} cpipe</div>
+<nav>
+  <a routerLink="/home" >Home Page of our website</a>
+  <a routerLink="/about-us" >About us</a>
+</nav>
+
+<app-c-input (onClick)="onEvent($event)">add</app-c-input>
+<app-c-input (onClick)="onEvent($event)">nee</app-c-input>
+
+<app-output1 (dataEvent)="getData($event)"></app-output1>
+
+<app-reactive-form></app-reactive-form>
+
+<router-outlet></router-outlet> -->
+
+<!-- <button #butRef>Submit</button> -->
+
+<div class="page-main">
+    <div class=" inside-section">
+        <div class=" text-design">Shubham Bus's</div>
+        <div class=" mt-4 account-section">Have an account ? <button class="custom-btn">Sign In</button></div>
+    </div>
+    <div>
+        <div class="inner-section">Find the best restaurants,
+            <br /> cafés and bars in India
+        </div>
+        <div class="frame">
+           
+        </div>
+    </div>
+    <div class="end-section">
+        From swanky upscale restaurants to the cosiest hidden gems serving the most incredible food,
+        <br />Zomato covers it all. Explore menus, and millions of restaurant photos and reviews from users just like
+        you,
+        <br />to find your next great meal.
+    </div>
+    <div class="conformation-container" *ngIf="flag">
+    
+        <div class="seat-row">
+            <div *ngFor="let seat of bookingInfo.seats">
+                <div class="seat" [ngClass]="seat.seatNo === 2? 'divide-category': ''" *ngIf="seat.row === 1">
+                    <label class="seat-label"
+                        [ngClass]="seat.status=== 'booked' ? (bookingForm.controls.name.value === seat.bookedBy ? 'selected' : 'booked'): 'available'">
+                        {{seat.seatNo}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="seat-row">
+            <div *ngFor="let seat of bookingInfo.seats">
+                <div class="seat" [ngClass]="seat.seatNo === 7? 'divide-category': ''" *ngIf="seat.row === 2">
+                    <label class="seat-label"
+                        [ngClass]="seat.status=== 'booked' ? (bookingForm.controls.name.value === seat.bookedBy ? 'selected' : 'booked'): 'available'">
+                        {{seat.seatNo}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="seat-row">
+            <div *ngFor="let seat of bookingInfo.seats">
+                <div class="seat" [ngClass]="seat.seatNo === 12? 'divide-category': ''" *ngIf="seat.row === 3">
+                    <label class="seat-label"
+                        [ngClass]="seat.status=== 'booked' ? (bookingForm.controls.name.value === seat.bookedBy ? 'selected' : 'booked'): 'available'">
+                        {{seat.seatNo}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="seat-row">
+            <div *ngFor="let seat of bookingInfo.seats">
+                <div class="seat" [ngClass]="seat.seatNo === 17? 'divide-category': ''" *ngIf="seat.row === 4">
+                    <label class="seat-label"
+                        [ngClass]="seat.status=== 'booked' ? (bookingForm.controls.name.value === seat.bookedBy ? 'selected' : 'booked'): 'available'">
+                        {{seat.seatNo}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="seat-row">
+            <div *ngFor="let seat of bookingInfo.seats">
+                <div class="seat" [ngClass]="seat.seatNo === 22? 'divide-category': ''" *ngIf="seat.row === 5">
+                    <label class="seat-label"
+                        [ngClass]="seat.status=== 'booked' ? (bookingForm.controls.name.value === seat.bookedBy ? 'selected' : 'booked'): 'available'">
+                        {{seat.seatNo}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="new-booking">
+            <!-- <button (click)="openBookingForm()"> New Booking</button> -->
+        </div>
+    </div>
+</div>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9090819827</span>
+            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>subham7504@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <!-- <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"></a> -->
+                        </div>
+                        <div class="footer-text">
+                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor
+                                incididuntut consec tetur adipisicing
+                                elit,Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Expert Team</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Latest News</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2023, All Right Reserved Shubham</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
